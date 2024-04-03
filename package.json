@@ -1,0 +1,36 @@
+{
+  "name": "test02",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.108.26"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-test02.Purchases": "cds watch --open test02.Purchases/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-test02.Customers": "cds watch --open test02.Customers/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-test02.Redemptions": "cds watch --open test02.Redemptions/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "[production]": {
+        "db": "hana"
+      }
+    }
+  },
+  "lcap": true,
+  "sapux": [
+    "app/test02.Purchases",
+    "app/test02.Customers",
+    "app/test02.Redemptions"
+  ]
+}
